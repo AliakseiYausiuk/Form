@@ -10,7 +10,6 @@ type PropsType = {
 export const Layout = ({children}: PropsType) => {
     return (
         <Grid container direction={'column'} alignItems={'center'} justifyContent={'center'}>
-            <Title/>
             {children}
         </Grid>
     )
