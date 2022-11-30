@@ -1,17 +1,16 @@
 import React from 'react';
 import './App.css';
-import {Form} from './component/Form/Form';
-import {Title} from './component/Title/Title';
 import {Grid} from '@material-ui/core';
 import {Layout} from './layout/Layout';
 import {Header} from './component/Header/Header';
+import {Pages} from './component/Pages/Pages';
 
 function App() {
     return (
         <Grid className="App">
             <Header/>
             <Layout>
-                <Form/>
+                <Pages/>
             </Layout>
         </Grid>
     );
