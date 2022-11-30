@@ -1,10 +1,15 @@
 import React from 'react';
 import {Button, Grid, TextField} from '@material-ui/core';
-import styles from './form.module.css'
+import styles from '../Login/login.module.css'
 import {useForm} from 'react-hook-form';
+import {Title} from '../Title/Title';
+
+export type PropsTypeSinup = {
+    title: string
+}
 
 
-export const Form = () => {
+export const Signup = ({title}: PropsTypeSinup) => {
     const {register, handleSubmit, formState: {errors, isValid}, reset} = useForm({mode: 'onBlur'});
     const onSubmit = (data: any) => {
         reset();
@@ -12,6 +17,7 @@ export const Form = () => {
 
     return (
         <Grid className={styles.wrapper} container direction={'column'}>
+            <Title title={title}/>
             <TextField className={styles.email} label="Email" variant="standard" margin="normal" type={'text'}
                        {...register('Email', {
                            required: 'Поле обязательно к заполнению',
