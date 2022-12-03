@@ -38,7 +38,7 @@ export const Login = ({title}: PropsTypeLogin) => {
                        })} error={!!errors?.password}
                        helperText={errors?.password?.message ? `${errors.password.message}` : ''}/>
             <Button className={styles.btn} variant="contained" color={'secondary'}
-                    onClick={handleSubmit(onSubmit)} disabled={!isValid}>Outlined</Button>
+                    onClick={handleSubmit(onSubmit)} disabled={!isValid}>Enter</Button>
         </Grid>
     )
 }
