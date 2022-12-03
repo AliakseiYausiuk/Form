@@ -9,7 +9,7 @@ export const Pages = () => {
     return (
         <>
             <Routes>
-                <Route path={'/'} element={<GetStart title={'Get start'}/>}/>
+                <Route path={'/'} element={<GetStart title={'Welcome'}/>}/>
                 <Route path={'/login'} element={<Login title={'Log In'}/>}/>
                 <Route path={'/singup'} element={<Signup title={'Sign Up'}/>}/>
 
