@@ -14,7 +14,6 @@ export type FormValues = {
 
 
 export const Signup = ({title}: PropsTypeSinup) => {
-    console.log(localStorage.getItem('user'))
 
     const setLocalStorage = (email: string, password: number) => {
 
@@ -26,7 +25,7 @@ export const Signup = ({title}: PropsTypeSinup) => {
     }
 
     const {register, handleSubmit, formState: {errors, isValid}, reset} = useForm<FormValues>({mode: 'onBlur'});
-    const onSubmit: SubmitHandler<FormValues> = (data: any) => {
+    const onSubmit: SubmitHandler<FormValues> = (data: FormValues) => {
         setLocalStorage(data.email, data.password);
         reset();
     }
